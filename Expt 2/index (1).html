@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Student Webpage</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Internal JavaScript -->
+    <script>
+        function welcomeMessage() {
+            alert("Welcome to the Student Information Portal!");
+
+            console.log("Website Loaded Successfully");
+            console.info("Internal JavaScript Executed");
+            console.warn("This is a warning message.");
+            console.error("Sample Error Message.");
+
+            const student = [
+                {
+                    Name: "Parth Denge",
+                    PRN: "24070521018",
+                    Course: "B.Tech CSE"
+                }
+            ];
+
+            console.table(student);
+        }
+    </script>
+
+</head>
+
+<body onload="welcomeMessage()">
+
+    <div class="container">
+
+        <h1>Student Information</h1>
+
+        <form onsubmit="return validateForm()">
+
+            <label>Name</label>
+            <input type="text" id="name">
+
+            <label>PRN Number</label>
+            <input type="text" id="prn">
+
+            <label>Email</label>
+            <input type="email" id="email">
+
+            <label>Course</label>
+            <input type="text" id="course">
+
+            <!-- Inline JavaScript -->
+            <button type="button"
+                onclick="displayStudent(); alert('Student Details Displayed Successfully!')">
+                Display Details
+            </button>
+
+            <button type="submit">
+                Submit
+            </button>
+
+        </form>
+
+        <hr>
+
+        <h2>Student Details</h2>
+
+        <p><b>Name:</b> <span id="dname"></span></p>
+        <p><b>PRN:</b> <span id="dprn"></span></p>
+        <p><b>Email:</b> <span id="demail"></span></p>
+        <p><b>Course:</b> <span id="dcourse"></span></p>
+
+    </div>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>         
