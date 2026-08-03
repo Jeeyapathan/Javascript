@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Grading System</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="grade-page">
+
+    <div class="grade-container">
+
+        <div class="header">
+
+            <h1>🎓 Student Grading System</h1>
+
+            <button class="logout-btn" onclick="logout()">
+                Logout
+            </button>
+
+        </div>
+
+        <div class="form-section">
+
+            <div class="input-box">
+
+                <label>Student Name</label>
+
+                <input
+                    type="text"
+                    id="studentName"
+                    placeholder="Enter Student Name"
+                    required>
+
+            </div>
+
+            <div class="input-box">
+
+                <label>PRN Number</label>
+
+                <input
+                    type="text"
+                    id="studentPRN"
+                    placeholder="Enter PRN Number"
+                    required>
+
+            </div>
+
+            <div class="input-box">
+
+                <label>Marks (0 - 100)</label>
+
+                <input
+                    type="number"
+                    id="marks"
+                    placeholder="Enter Marks"
+                    min="0"
+                    max="100"
+                    required>
+
+            </div>
+
+            <button class="generate-btn" onclick="calculateGrade()">
+                Generate Result
+            </button>
+
+        </div>
+
+        <div class="result-box">
+
+            <h2>Student Result</h2>
+
+            <hr>
+
+            <p><strong>Name :</strong> <span id="nameResult">-</span></p>
+
+            <p><strong>PRN :</strong> <span id="prnResult">-</span></p>
+
+            <p><strong>Marks :</strong> <span id="marksResult">-</span></p>
+
+            <p><strong>Grade :</strong>
+                <span id="gradeResult">-</span>
+            </p>
+
+            <p><strong>Status :</strong>
+                <span id="statusResult">-</span>
+            </p>
+
+            <button class="print-btn" onclick="window.print()">
+                🖨 Print Result
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

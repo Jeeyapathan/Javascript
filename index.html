@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing Calculator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Billing Calculator</h1>
+
+    <label>Customer Name</label>
+    <input type="text" id="customer">
+
+    <label>Product Name</label>
+    <input type="text" id="product">
+
+    <label>Price (₹)</label>
+    <input type="number" id="price">
+
+    <label>Quantity</label>
+    <input type="number" id="quantity">
+
+    <button onclick="generateBill()">Generate Bill</button>
+
+    <div class="result">
+
+        <p>Subtotal : ₹ <span id="subtotal">0</span></p>
+
+        <p>GST (18%) : ₹ <span id="gst">0</span></p>
+
+        <h2>Total Amount : ₹ <span id="total">0</span></h2>
+
+    </div>
+
+    <button onclick="clearData()">Clear</button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
