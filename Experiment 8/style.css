@@ -1,0 +1,241 @@
+/* =========================================
+   Global Styles
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #6c8cff;
+    --primary-dark: #5574e8;
+    --background: #f4f7fb;
+    --card: #ffffff;
+    --text: #273142;
+    --muted: #7b8494;
+    --border: #dfe5ee;
+    --input-bg: #fbfcfe;
+    --error: #e05d6f;
+    --success: #3a9b72;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #f5f8ff, #eef5f3);
+    color: var(--text);
+    min-height: 100vh;
+}
+
+/* =========================================
+   Page Layout
+========================================= */
+
+.page-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+/* =========================================
+   Membership Card
+========================================= */
+
+.membership-card {
+    width: 100%;
+    max-width: 540px;
+    background: var(--card);
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid #e8edf4;
+    box-shadow: 0 15px 45px rgba(61, 78, 104, 0.10);
+}
+
+/* =========================================
+   Header
+========================================= */
+
+.form-header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.logo {
+    display: inline-block;
+    margin-bottom: 18px;
+    font-size: 21px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: var(--text);
+}
+
+.logo span {
+    color: var(--primary);
+}
+
+.form-header h1 {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.form-header p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* =========================================
+   Form
+========================================= */
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #3c4656;
+}
+
+input,
+select {
+    width: 100%;
+    height: 50px;
+    padding: 0 15px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--input-bg);
+    color: var(--text);
+    font-size: 14px;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+input::placeholder {
+    color: #a5adba;
+}
+
+input:focus,
+select:focus {
+    border-color: var(--primary);
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(108, 140, 255, 0.10);
+}
+
+input.invalid,
+select.invalid {
+    border-color: var(--error);
+}
+
+/* =========================================
+   Error Messages
+========================================= */
+
+.error-message {
+    display: block;
+    min-height: 17px;
+    margin-top: 5px;
+    color: var(--error);
+    font-size: 12px;
+}
+
+/* =========================================
+   Submit Button
+========================================= */
+
+.submit-btn {
+    width: 100%;
+    height: 52px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 10px;
+    background: var(--primary);
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.submit-btn:hover {
+    background: var(--primary-dark);
+    transform: translateY(-1px);
+    box-shadow: 0 8px 18px rgba(108, 140, 255, 0.20);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+/* =========================================
+   Success Message
+========================================= */
+
+.success-message {
+    display: none;
+    margin-top: 18px;
+    padding: 13px 15px;
+    border-radius: 9px;
+    background: #edf9f3;
+    color: var(--success);
+    text-align: center;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.success-message.show {
+    display: block;
+}
+
+/* =========================================
+   Footer
+========================================= */
+
+.form-footer {
+    margin-top: 25px;
+    text-align: center;
+    color: #9aa3b1;
+    font-size: 12px;
+}
+
+/* =========================================
+   Responsive Design
+========================================= */
+
+@media (max-width: 600px) {
+
+    .page-container {
+        padding: 20px 14px;
+    }
+
+    .membership-card {
+        padding: 28px 22px;
+        border-radius: 16px;
+    }
+
+    .form-header h1 {
+        font-size: 25px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    input,
+    select {
+        height: 48px;
+    }
+}

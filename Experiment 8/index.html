@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gym Membership Form</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="page-container">
+
+        <section class="membership-card">
+
+            <div class="form-header">
+                <div class="logo">FIT<span>ZONE</span></div>
+                <h1>Gym Membership</h1>
+                <p>Start your fitness journey with us today.</p>
+            </div>
+
+            <form id="membershipForm" novalidate>
+
+                <!-- Name -->
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your full name"
+                        autocomplete="name"
+                        required
+                    >
+                    <small class="error-message" id="nameError"></small>
+                </div>
+
+                <!-- Age -->
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label for="age">Age</label>
+                        <input
+                            type="number"
+                            id="age"
+                            name="age"
+                            placeholder="e.g. 25"
+                            min="16"
+                            max="100"
+                            required
+                        >
+                        <small class="error-message" id="ageError"></small>
+                    </div>
+
+                    <!-- Phone -->
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="Enter phone number"
+                            autocomplete="tel"
+                            required
+                        >
+                        <small class="error-message" id="phoneError"></small>
+                    </div>
+
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="you@example.com"
+                        autocomplete="email"
+                        required
+                    >
+                    <small class="error-message" id="emailError"></small>
+                </div>
+
+                <!-- Membership Plan -->
+                <div class="form-group">
+                    <label for="membershipPlan">Membership Plan</label>
+
+                    <select id="membershipPlan" name="membershipPlan" required>
+                        <option value="">Select a membership plan</option>
+                        <option value="Basic">Basic — ₹999 / Month</option>
+                        <option value="Standard">Standard — ₹1,499 / Month</option>
+                        <option value="Premium">Premium — ₹1,999 / Month</option>
+                        <option value="Annual">Annual — ₹19,999 / Year</option>
+                    </select>
+
+                    <small class="error-message" id="planError"></small>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    Join Now
+                </button>
+
+                <div id="successMessage" class="success-message">
+                    Membership application submitted successfully!
+                </div>
+
+            </form>
+
+            <p class="form-footer">
+                Your information is safe and secure.
+            </p>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
