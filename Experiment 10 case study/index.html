@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Concert Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>🎵 Music Concert Registration 🎵</h1>
+
+        <form id="concertForm">
+            <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" id="name" required>
+            </div>
+
+            <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" id="email" required>
+            </div>
+
+            <div class="form-group">
+                <label>Phone Number</label>
+                <input type="tel" id="phone" required>
+            </div>
+
+            <div class="form-group">
+                <label>Age</label>
+                <input type="number" id="age" min="10" max="100" required>
+            </div>
+
+            <div class="form-group">
+                <label>Concert Date</label>
+                <input type="date" id="date" required>
+            </div>
+
+            <div class="form-group">
+                <label>Ticket Type</label>
+                <select id="ticket" required>
+                    <option value="">Select Ticket</option>
+                    <option>General Admission</option>
+                    <option>VIP</option>
+                    <option>Premium</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Number of Tickets</label>
+                <input type="number" id="tickets" min="1" max="10" required>
+            </div>
+
+            <button type="submit">Register Now</button>
+        </form>
+
+        <div id="message"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
